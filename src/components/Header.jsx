@@ -8,11 +8,11 @@ function Header() {
   return (
     <header>
       <section>
-        <div className='icon'>
+        <div className='icon clickable'>
           <img src={MenuIcon} alt='menu icon'></img>
         </div>
         <section>
-          <div className='icon logo-border'>
+          <div className='icon clickable logo-border'>
           <img src={Logo} alt='logo'></img>
           </div>
      
@@ -22,18 +22,18 @@ function Header() {
           </div>
             <div className='column'>
               <span className='dark-grey'>Document Name</span>
-              <span className='white'>welcome.md</span>
+              <span contentEditable="true" className='white'>welcome.md</span>
             </div>
           </div>
         </section>
       </section>
       <section>
-        <div className='icon'> 
-        <img src={DeleteIcon} alt='delete icon'></img>
+        <div className='icon clickable'> 
+        <img src={DeleteIcon} alt='delete icon '></img>
         </div>
         
-        <button>
-          <img src={SaveIcon} alt='save icon'></img>
+        <button className='clickable'>
+          <img src={SaveIcon} alt='save icon '></img>
           <span>Save Changes</span>
         </button>
       </section>
