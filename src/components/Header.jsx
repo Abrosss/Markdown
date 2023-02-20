@@ -4,12 +4,13 @@ import SaveIcon from '../assets/icon-save.svg'
 import MenuIcon from '../assets/icon-menu.svg'
 import Logo from '../assets/logo.svg'
 import Document from '../assets/icon-document.svg'
-function Header() {
+import CloseIcon from '../assets/icon-close.svg'
+function Header({expanded, func}) {
   return (
     <header>
       <section>
-        <div className='icon clickable'>
-          <img src={MenuIcon} alt='menu icon'></img>
+        <div onClick={func} className='icon clickable'>
+          <img src={expanded ? CloseIcon : MenuIcon} alt='menu icon'></img>
         </div>
         <section>
           <div className='icon clickable logo-border'>
@@ -27,7 +28,7 @@ function Header() {
           </div>
         </section>
       </section>
-      <section>
+      <section className={expanded ? 'moved-out' : ''}>
         <div className='icon clickable'> 
         <img src={DeleteIcon} alt='delete icon '></img>
         </div>

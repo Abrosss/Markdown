@@ -26,6 +26,7 @@
 
 .container {
     height: 100vh;
+    flex: 1;
 }
 .clickable {
     cursor: pointer;
@@ -38,6 +39,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
+    transition: all .5s ease-in-out;
     section {
         display: flex;
         align-items: center;
@@ -85,4 +87,21 @@ header {
     .markdown {
         border-right: 1px black solid;
     }
+}
+.sidebar {
+    min-height: 100vh;
+    width: 0;
+    background-color: black;
+    transition: all .5s ease-in-out;
+}
+.sidebar.expand {
+    width: 20%;
+}
+.outer-container {
+    max-height: 100vh;
+    display: flex;
+    overflow-y: hidden;
+}
+.moved-out {
+    display: none;
 }

@@ -1,14 +1,19 @@
 
 import './css/styles.scss'
 import Header from './components/Header'
+import Sidebar from './components/Sidebar'
 import Preview from './assets/icon-show-preview.svg'
+import { useState } from 'react'
 function App() {
-
-
+const [expanded, setExpanded] = useState(false)
+console.log(expanded)
   return (
     <>
+    <section className='outer-container'>
+        <section className={expanded ? 'sidebar expand' : 'sidebar'}>
+        </section>
     <section className='container'>
-    <Header/>
+    <Header expanded={expanded} func={() => setExpanded(!expanded)}/>
     <section className='editor-space'>
       <section className='markdown part'>
         <div className='header-editor'>
@@ -25,6 +30,8 @@ function App() {
           </div>
         </div>
        </section>
+    </section>
+ 
     </section>
     </section>
     </>
