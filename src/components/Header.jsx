@@ -28,7 +28,7 @@ function Header({expanded, func}) {
           </div>
         </section>
       </section>
-      <section className={expanded ? 'moved-out' : ''}>
+      <section>
         <div className='icon clickable'> 
         <img src={DeleteIcon} alt='delete icon '></img>
         </div>

@@ -12,7 +12,7 @@ console.log(expanded)
     <section className='outer-container'>
         <section className={expanded ? 'sidebar expand' : 'sidebar'}>
         </section>
-    <section className='container'>
+    <section className={expanded ? 'container expand' : 'container'}>
     <Header expanded={expanded} func={() => setExpanded(!expanded)}/>
     <section className='editor-space'>
       <section className='markdown part'>
