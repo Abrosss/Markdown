@@ -53,6 +53,9 @@ header .logo-border {
 }
 header .icon {
   padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 header button {
   border: none;
@@ -90,6 +93,12 @@ header button {
 }
 .editor-space .markdown {
   border-right: 1px black solid;
+}
+.editor-space .markdown.hidden {
+  display: none;
+}
+.editor-space .preview.full {
+  width: 100%;
 }
 
 .sidebar {
