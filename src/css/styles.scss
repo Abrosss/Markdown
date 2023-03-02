@@ -1,11 +1,13 @@
 @import "./colors";
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@300;400;600&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;  
 }
-
+body {
+    font-family: 'Roboto Slab', serif;
+}
 .dark-grey {
     color: #5A6069;
 }
@@ -73,12 +75,14 @@ header {
     height: 90vh;
     .part {
         width: 50%;
+        height: 100%;
         textarea {
             width: 100%;
             height: 100%;
             border: none;
             outline: none;
             padding: 1rem;
+            resize: none;
         }
     }
     .header-editor {
@@ -96,6 +100,12 @@ header {
     .preview.full {
         width: 100%;
     }
+}
+.preview-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 .sidebar {
 
@@ -120,9 +130,71 @@ header {
 }
 .outer-container {
     max-height: 100vh;
-    overflow-y: hidden;
+
     position: relative;
 }
 .moved-out {
     display: none;
+}
+//MARKDOWN
+h1 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+h2 {
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+h3 {
+    font-weight: 600;
+    font-size: 1rem;
+}
+h4 {
+    font-weight: 600;
+    font-size: .9rem;
+}
+h5 {
+    font-weight: 600;
+    font-size: .7rem;
+}
+p {
+    font-weight: 400;
+    font-size: .8rem;
+    color: #7C8187;
+    line-height: 1.8;
+}
+textarea {
+    font-weight: 400;
+    font-size: .8rem;
+    color: #7C8187;
+    line-height: 1.8;
+
+}
+ol,ul {
+    margin-left: 2rem;
+    font-weight: 400;
+    font-size: .8rem;
+    color: #7C8187;
+    li{
+        margin-bottom: .5rem;
+    }
+}
+blockquote {
+    background-color: #E4E4E4;
+    padding: 1rem;
+    border-left: 3px #E46643 solid;
+    p{
+        color: #151619;
+        font-weight: 600;
+        a {
+            color: #151619; 
+        }
+    }
+}
+pre {
+    background-color: #F5F5F5;
+    padding: 1rem;
+    code {
+        line-height: 1.8;
+    }
 }
